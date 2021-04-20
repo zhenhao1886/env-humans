@@ -67,22 +67,29 @@
             var finish = [1.339970684553241, 103.96482329008909]
             var garden = [1.3423881050527369, 103.96406020537914]
             var chinese_house = [1.3426498367154758, 103.96381368798534]
+            function click(e) {
+              window.location.hash = "chinese"
+            }
             
             L.polyline(lineLatLng, {color: 'blue'}).addTo(mymap)
             start = L.marker(start).addTo(mymap)
             finish = L.marker(finish).addTo(mymap)
+            
             garden = L.marker(garden, {color: 'red'}).addTo(mymap)
-            chinese_house = L.marker(chinese_house, {color: 'red'}).addTo(mymap)
+            chinese_house = L.marker(chinese_house, {color: 'red'}).on('mouseover', click).addTo(mymap)
+            
             
             start.bindTooltip('<p>Start: Canteen!</p>')
             
             finish.bindTooltip('<p>End: Entrepreneurship Center! </br> <img src = pictures/DSC02932.JPG width = 200></img></p>')
             
-            
-            
         </script>
         
-    
+      <h3 id="garden">This is the garden behind Block 57!</h3>
+      
+      <h3 id="chinese"> This is the chinese house!</h3>
+      
+      <h3 id="ec"> This is the EC! </h3>
     
     </body>
 </html>
