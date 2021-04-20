@@ -67,16 +67,25 @@
             var finish = [1.339970684553241, 103.96482329008909]
             var garden = [1.3423881050527369, 103.96406020537914]
             var chinese_house = [1.3426498367154758, 103.96381368798534]
-            function click(e) {
-              window.location.hash = "chinese"
+            
+            function click_garden(e) {
+              document.getElementById("garden").scrollIntoView({behavior: 'smooth'})
+            }
+            
+            function click_chinese(e) {
+              document.getElementById("chinese").scrollIntoView({behavior: 'smooth'})
+            }
+            
+            function click_ec(e) {
+              document.getElementById("ec").scrollIntoView({behavior: 'smooth'})
             }
             
             L.polyline(lineLatLng, {color: 'blue'}).addTo(mymap)
             start = L.marker(start).addTo(mymap)
-            finish = L.marker(finish).addTo(mymap)
+            finish = L.marker(finish).on('click', click_ec).addTo(mymap)
             
-            garden = L.marker(garden, {color: 'red'}).addTo(mymap)
-            chinese_house = L.marker(chinese_house, {color: 'red'}).on('mouseover', click).addTo(mymap)
+            garden = L.marker(garden, {color: 'red'}).on('click', click_garden).addTo(mymap)
+            chinese_house = L.marker(chinese_house, {color: 'red'}).on('click', click_garden).addTo(mymap)
             
             
             start.bindTooltip('<p>Start: Canteen!</p>')
