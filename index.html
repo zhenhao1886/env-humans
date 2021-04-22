@@ -66,23 +66,82 @@
             var start = [1.3409561981213765, 103.96298463956366]
             var finish = [1.339970684553241, 103.96482329008909]
             var garden = [1.3423881050527369, 103.96406020537914]
+            var backgate = [1.340139617506748, 103.96516527173688]
             var chinese_house = [1.3426498367154758, 103.96381368798534]
             
+<<<<<<< Updated upstream
             L.polyline(lineLatLng, {color: 'blue'}).addTo(mymap)
             start = L.marker(start).addTo(mymap)
             finish = L.marker(finish).addTo(mymap)
             garden = L.marker(garden, {color: 'red'}).addTo(mymap)
             chinese_house = L.marker(chinese_house, {color: 'red'}).addTo(mymap)
+=======
+            function click_garden(e) {
+              document.getElementById("garden").scrollIntoView({behavior: 'smooth'})
+            }
+            
+            function click_chinese(e) {
+              document.getElementById("chinese").scrollIntoView({behavior: 'smooth'})
+            }
+            
+            function click_ec(e) {
+              document.getElementById("ec").scrollIntoView({behavior: 'smooth'})
+            }
+            
+            function click_backgate(e) {
+              document.getElementById("backgate").scrollIntoView({behavior: 'smooth'})
+            }
+            
+            L.polyline(lineLatLng, {color: 'blue'}).addTo(mymap)
+            start = L.marker(start).addTo(mymap)
+            finish = L.marker(finish).on('click', click_ec).addTo(mymap)
+            backgate = L.marker(backgate).on('click', click_backgate).addTo(mymap)
+            garden = L.marker(garden, {color: 'red'}).on('click', click_garden).addTo(mymap)
+            chinese_house = L.marker(chinese_house, {color: 'red'}).on('click', click_garden).addTo(mymap)
+>>>>>>> Stashed changes
             
             start.bindTooltip('<p>Start: Canteen!</p>')
-            
-            finish.bindTooltip('<p>End: Entrepreneurship Center! </br> <img src = pictures/DSC02932.JPG width = 200></img></p>')
+            backgate.bindTooltip('<p>Waypoint 3: Back Gate </br> <img src = pictures/DSC02917.JPG width = 200></img></p>')
+            garden.bindTooltip('<p>Waypoint 1: Garden </br> <img src = pictures/DSC02884.JPG width = 200></img></p>')
+            chinese_house.bindTooltip('<p>Waypoint 2: Chinese House </br> <img src = pictures/DSC02894.JPG width = 200></img></p>')
+            finish.bindTooltip('<p>Waypoint 4: Entrepreneurship Center </br> <img src = pictures/DSC02932.JPG width = 200></img></p>')
             
             
             
         </script>
+    
+        <p> There was a slight drizzle in the afternoon. We started our walk from the canteen to the garden behind Block 57 of the hostel area.</p>
+      <h2 id="garden">Waypoint 1: Garden behind Block 57!</h2>
         
+<<<<<<< Updated upstream
     
     
+=======
+        <img src = "pictures/DSC02883.JPG" width = 400>
+        
+        <p>One interesting tree in the area was the money tree. It has palm-like leaves and has medicinal uses such as relieving anxiety and improving sleep. It is also said to bring the owner good fortune!</p>
+        <img src = "pictures/DSC02882.JPG" width = 400>
+        <img src = "pictures/DSC02887.JPG" width="400">
+        
+      <h2 id="chinese"> Waypoint 2: Traditional Chinese House</h2>
+        <p> We entered the Traditional Chinese House. The interior of the house was spacious and wide, with strong wooden pillars supporting from below. One room even had a wood-carved sink that is smooth and embodying the essence of the true Chinese craftmanship.</p>
+        <img src = "pictures/DSC02892.JPG" width="400">
+        <img src = "pictures/DSC02893.JPG" width="400">
+        <img src = "pictures/DSC02900.JPG" width="400">
+        <img src = "pictures/DSC02896.JPG" width="400">
+      
+      <h2 id="backgate"> Waypoint 3: SUTD Back Gate! </h2>
+        <p> Here we see the trees at the back gate. This particular tree, Bucida molineti, is also called a "Dwarf Geometry Tree" and has a unique layered umbrella shape. It shielded us from the rain! </p>
+        <img src = "pictures/DSC02923.JPG" width="400">
+        <img src = "pictures/DSC02926.JPG" width="400">
+        <img src = "pictures/DSC02927.JPG" width="400">
+        
+      <h2 id="ec"> Waypoint 4: This is the Entrepreneurship Centre! </h2>
+        <p> This EC may look like a dull workshop but it is a place where innovative ideas are born! </p>
+        <img src = "pictures/DSC02932.JPG" width="400">
+        <img src = "pictures/DSC02929.JPG" width="400">
+        
+        
+>>>>>>> Stashed changes
     </body>
 </html>
