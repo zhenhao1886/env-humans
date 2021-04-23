@@ -17,7 +17,7 @@
       height: 750px;
       }
     </style>
-    <title>Hello World</title>
+    <title>Environmental HASS Assignment</title>
    </head>
 
     
@@ -69,13 +69,8 @@
             var backgate = [1.340139617506748, 103.96516527173688]
             var chinese_house = [1.3426498367154758, 103.96381368798534]
             
-<<<<<<< Updated upstream
-            L.polyline(lineLatLng, {color: 'blue'}).addTo(mymap)
-            start = L.marker(start).addTo(mymap)
-            finish = L.marker(finish).addTo(mymap)
-            garden = L.marker(garden, {color: 'red'}).addTo(mymap)
-            chinese_house = L.marker(chinese_house, {color: 'red'}).addTo(mymap)
-=======
+
+
             function click_garden(e) {
               document.getElementById("garden").scrollIntoView({behavior: 'smooth'})
             }
@@ -97,8 +92,7 @@
             finish = L.marker(finish).on('click', click_ec).addTo(mymap)
             backgate = L.marker(backgate).on('click', click_backgate).addTo(mymap)
             garden = L.marker(garden, {color: 'red'}).on('click', click_garden).addTo(mymap)
-            chinese_house = L.marker(chinese_house, {color: 'red'}).on('click', click_garden).addTo(mymap)
->>>>>>> Stashed changes
+            chinese_house = L.marker(chinese_house, {color: 'red'}).on('click', click_chinese).addTo(mymap)
             
             start.bindTooltip('<p>Start: Canteen!</p>')
             backgate.bindTooltip('<p>Waypoint 3: Back Gate </br> <img src = pictures/DSC02917.JPG width = 200></img></p>')
@@ -113,10 +107,7 @@
         <p> There was a slight drizzle in the afternoon. We started our walk from the canteen to the garden behind Block 57 of the hostel area.</p>
       <h2 id="garden">Waypoint 1: Garden behind Block 57!</h2>
         
-<<<<<<< Updated upstream
-    
-    
-=======
+
         <img src = "pictures/DSC02883.JPG" width = 400>
         
         <p>One interesting tree in the area was the money tree. It has palm-like leaves and has medicinal uses such as relieving anxiety and improving sleep. It is also said to bring the owner good fortune!</p>
@@ -140,8 +131,6 @@
         <p> This EC may look like a dull workshop but it is a place where innovative ideas are born! </p>
         <img src = "pictures/DSC02932.JPG" width="400">
         <img src = "pictures/DSC02929.JPG" width="400">
-        
-        
->>>>>>> Stashed changes
+
     </body>
 </html>
